@@ -12,8 +12,12 @@ This is simple web server which allows 'mp4' and 'webm' file to stream over netw
 This App requires [Python](https://www.python.org/) v3.6+ to run.
 
 # Warning
- - Write All Folder path in a file called 'paths.txt'
+ - If you want to use as Portable then just run code in root folder of Vidoes
+ - Or you can provide all paths in file 'paths.txt'
+ - Write All Folder path in a file called 'paths.txt' (Full Paths)
  - Each path on single line
+ - You can also use database to reduce memory use (if you have many files)
+ - It uses sqlite3 if you have 'db.txt' file in same folder
  
 Install the dependencies and devDependencies and start the server.
 
