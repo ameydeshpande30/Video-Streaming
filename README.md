@@ -26,5 +26,5 @@ $ python3 app.py
 License
 ----
 
-MIT
+[MIT](LICENSE)
 
