@@ -18,6 +18,7 @@ This App requires [Python](https://www.python.org/) v3.6+ to run.
 Install the dependencies and devDependencies and start the server.
 
 ```sh
+$ git clone https://github.com/ameydeshpande30/Video-Streaming.git
 $ cd Video-Streaming
 $ pip3 install -r requirements.txt
 $ python3 app.py
