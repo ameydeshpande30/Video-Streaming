@@ -5,3 +5,9 @@ venv
 .vscode
 *.db
 paths.txt
+build
+paths1.txt
+dist
+*.spec
+log.txt
+extras

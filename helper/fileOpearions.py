@@ -1,4 +1,4 @@
-from os import walk
+from os import walk, path, getcwd
 from helper.db import addFile, getAllFiles as af, commitData
 
 def getAllFiles(path):
@@ -16,13 +16,11 @@ def getMediaFiles(paths):
         getAllFiles(i)
 
 
-def readFromfile(filname):
-    try:
-        dataList = open(filname, 'r').readlines()
-    except:
-        with open(filname, 'w') as fp: 
-            pass
-        return
+def readFromfile(filename):
+    if path.isfile(filename):
+        dataList = open(filename, 'r').readlines()
+    else:
+        dataList = [path.abspath(getcwd())]
     print("Adding Files from {} Folders".format(len(dataList)))
     for i in dataList:
         getAllFiles(i.strip())

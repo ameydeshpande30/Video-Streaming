@@ -1,6 +1,6 @@
 flask==1.1.2
 peewee==3.13.3
-simple_term_menu==0.6.7
+inquirer==2.7.0
 netifaces==0.10.9
 pyqrcode==1.2.1
 pysqlite3==0.4.3
