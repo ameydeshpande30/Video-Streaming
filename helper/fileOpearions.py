@@ -1,5 +1,10 @@
+from helper.version import getVersion
 from os import walk, path, getcwd
-from helper.db import addFile, getAllFiles as af, commitData
+VERSION = getVersion()
+if VERSION == "PORTABLE":
+    from helper.portable import addFile, getAllFiles as af
+else:
+    from helper.db import addFile, getAllFiles as af
 
 def getAllFiles(path):
     for (dirpath, dirnames, filenames) in walk(path):
@@ -9,7 +14,6 @@ def getAllFiles(path):
                     addFile(str(dirpath), str(i))
         except Exception as e:
             print(e)
-    commitData()
 
 def getMediaFiles(paths):
     for i in paths:

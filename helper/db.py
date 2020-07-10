@@ -19,6 +19,7 @@ def start():
 
 def addFile(fileDir, fileName):
     Files.create(fileDir=fileDir, fileName=fileName)
+    db.commit()
     
 def commitData():
     db.commit()
