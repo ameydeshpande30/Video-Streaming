@@ -6,6 +6,7 @@ This is simple web server which allows 'mp4' and 'webm' file to stream over netw
 
   - Allows Multiple Folders
   - Prints Qr for easy access
+  - Support for sqlite3
 
 ### Installation
 
