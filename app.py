@@ -1,6 +1,7 @@
+import pkg_resources.py2_warn
 from helper.version import getVersion
 from flask import Flask, send_file, make_response, send_from_directory, render_template, redirect
-from helper.fileOpearions import readFromfile
+from helper.fileOperations import readFromfile
 import sys, os
 from helper.interface import showMenu
 VERSION = getVersion()
@@ -31,12 +32,12 @@ def index():
     return render_template("index.html", data=fl)
 
 
-def start():
+def start(root, ip, port):
     startDB()
     deleteTable()
-    readFromfile("paths.txt")
-    port = 5000
-    ip = showMenu(port)
+    readFromfile("paths.txt", root)
+    # port = 5000
+    # ip = showMenu(port)
     app.run(host=ip, port=port, threaded=True)
 
-start()
+# start()

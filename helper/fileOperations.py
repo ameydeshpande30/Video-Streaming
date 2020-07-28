@@ -20,11 +20,11 @@ def getMediaFiles(paths):
         getAllFiles(i)
 
 
-def readFromfile(filename):
+def readFromfile(filename, root):
     if path.isfile(filename):
         dataList = open(filename, 'r').readlines()
     else:
-        dataList = [path.abspath(getcwd())]
+        dataList = [root]
     print("Adding Files from {} Folders".format(len(dataList)))
     for i in dataList:
         getAllFiles(i.strip())
